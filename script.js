@@ -32,6 +32,14 @@ rollDice.addEventListener('click' , ()=>{
 })
 
 
+if(Number(user1Score.textContent) >= 40){
+    alert("User 1 Won!");
+    restart();
+}else if(Number(user2Score.textContent) >= 40){
+    alert("User 2 Won!");
+    restart();
+}
+
 
 saveBtn.addEventListener('click' , ()=>{
     save(nobat); 
