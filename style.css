@@ -1,0 +1,84 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.container{
+    background-color: aquamarine;
+    border-radius: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.user1 , .user2{
+    margin: 25px;
+    background-color: bisque;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.user2{
+    background-color: beige;
+}
+
+.select{
+    box-shadow: 0px 0px 10px rgb(151, 151, 151);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.buttons>button{
+    margin: 10px;
+    background-color: #EA4C89;
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-size: 16px;
+    border-style: none;
+    cursor: pointer;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px 16px;
+
+}
+
+.buttons>button:hover{
+    background-color: #f385af;
+}
+
+.dice{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 50px;
+}
+
+.diceImg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;   
+}
+
+.hidden{
+    display: none;
+}
