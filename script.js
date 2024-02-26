@@ -12,10 +12,12 @@ let nobat = true;
 let score = 0;
 user1Board.classList.add("select");
 
+//roll dice button
 rollDice.addEventListener('click' , ()=>{
     hiddenAll();
     let rand = Math.floor((Math.random() * 6)+1);
     showDice(rand-1);
+
     if(rand == 1){
         if(nobat){
             currentScoreUser1.textContent = 0;
@@ -29,37 +31,37 @@ rollDice.addEventListener('click' , ()=>{
         Play(nobat , score);
     }
 
+
 })
 
 
-if(Number(user1Score.textContent) >= 40){
-    alert("User 1 Won!");
-    restart();
-}else if(Number(user2Score.textContent) >= 40){
-    alert("User 2 Won!");
-    restart();
-}
 
 
+
+//save scores button
 saveBtn.addEventListener('click' , ()=>{
-    save(nobat); 
+    save(nobat);
 })
 
+//restart game button
 restartBtn.addEventListener('click', ()=>{
     restart();
 })
 
 
+//roll dice
 function showDice(num){
     dice[num].classList.remove("hidden");
 }
 
+//hidden dice
 function hiddenAll(){
     for(let i = 0 ; i < dice.length ; i++){
         dice[i].classList.add("hidden");
     }
 }
 
+//play game function
 function Play(n , s){
     if(n){
         currentScoreUser1.textContent = s;
@@ -74,6 +76,7 @@ function Play(n , s){
 
 }
 
+//save score function
 function save(n){
     let sc;
     if(n){
@@ -89,11 +92,21 @@ function save(n){
         user1Board.classList.add("select");
         user2Board.classList.remove("select");
     }
+
+    //identifying the winner
+    if(Number(user1Score.textContent) >= 40){
+        alert("User 1 Won!");
+        restart();
+    }else if(Number(user2Score.textContent) >= 40){
+        alert("User 2 Won!");
+        restart();
+    } 
+
     nobat = !nobat;
     score = 0;
 }
 
-
+//retstart game function
 function restart(){
     score = 0;
     nobat = true;
